@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LYAM</title>
+    <link rel="icon" type="image/img" href="../imgs/logo.webp" />
+    <link rel="stylesheet" href="../css/video-js.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="style-en.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"
+      defer
+    ></script>
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../js/viever-js.js" defer></script>
+    <script src="../js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="back">
+      <div class="blur-background"></div>
+      <div id="form" class="popup">
+        <div class="form">
+          <div id="close_form"><img src="../svgs/Vector (8).svg" /></div>
+          <h3>LEAVE A REQUEST</h3>
+          <div class="group-form">
+            <input
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              id="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="group-form">
+            <input
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Telegram nickname"
+              id="nick"
+            />
+          </div>
+          <div class="group-form">
+            <input
+              type="tel"
+              autocomplete="off"
+              spellcheck="false"
+              id="phone"
+              placeholder="Phone"
+              required
+            />
+          </div>
+          <div class="group-form">
+            <div class="select-wrapper">
+              <select id="service" class="custom-select" required>
+                <option value="">Service</option>
+                <option value="Сет 1">Set 1</option>
+                <option value="Сет 2">Set 2</option>
+                <option value="Сет 3">Set 3</option>
+                <option value="Сет 4">Set 4</option>
+                <option value="Разовая консультация">
+                  One-time consultation
+                </option>
+                <option value="VIP-консультация">VIP consultation</option>
+              </select>
+            </div>
+          </div>
+          <div id="send_form_data" class="submit-btn" disabled>Send</div>
+        </div>
+      </div>
+      <div id="notification" class="notification">
+        <div class="notification-content">
+          <img src="../svgs/icons8.svg" alt="Checkmark" />
+          <span>The application has been sent!</span>
+        </div>
+      </div>
+      <div class="back-gr"></div>
+      <div class="back-yell"></div>
+      <div id="mobile-header" class="mobile-header">
+        <div class="lyam">
+          <a href="#top">LYAM</a>
+        </div>
+        <div id="close" class="close">
+          <img src="../svgs/close.svg" alt="Close" />
+        </div>
+        <div class="con-mobile-header">
+          <img src="../imgs/green.webp" alt="Green" class="green" />
+          <img src="../imgs/yellow.webp" alt="Yellow" class="yellow" />
+          <div><a href="#format">FORMAT</a></div>
+          <div><a href="#history">STORY</a></div>
+          <div><a href="#tarifs">PRICES</a></div>
+          <div><a href="#cases">CASES</a></div>
+        </div>
+        <div class="leng mb-leng">
+          <a href="#" data-lang="en">EN</a>
+          <a href="#" data-lang="uk">UK</a>
+          <a href="#" data-lang="ru">RU</a>
+        </div>
+        <!--<img
+          src="../imgs/en-icon-of-instagram-with-red-neon-0.webp"
+          alt=""
+          class="icon-inst"
+          loading="lazy"
+        />-->
+      </div>
+      <div class="header">
+        <div class="lyam">
+          <a href="#top">LYAM</a>
+        </div>
+        <div class="menu">
+          <div><a href="#format">FORMAT</a></div>
+          <div><a href="#history">STORY</a></div>
+          <div><a href="#tarifs">PRICES</a></div>
+          <div><a href="#cases">CASES</a></div>
+        </div>
+        <div class="leng">
+          <a href="#" data-lang="en">EN</a>
+          <a href="#" data-lang="uk">UK</a>
+          <a href="#" data-lang="ru">RU</a>
+        </div>
+        <div id="menu_mobile">
+          <img src="../imgs/menu.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="main" id="top">
+        <div class="main-title">
+          <p>SMM agency</p>
+          <span>LYAM</span>
+        </div>
+        <div class="intro-img">
+          <img
+            src="../imgs/en-icon-of-instagram-with-red-neon-0.webp"
+            alt=""
+            loading="lazy"
+          />
+          <div class="text-intro fade-in">
+            <p>
+              Pack a selling blog, gain 1,000 subscribers. get a flood of
+              customers.
+            </p>
+          </div>
+          <div class="left-main">
+            <div class="fade-in">
+              <span>MOUNTED</span>
+              <p>2000+ reels</p>
+            </div>
+            <div class="fade-in">
+              <span>CONDUCTED</span>
+              <p>550+ shootings</p>
+            </div>
+            <div class="fade-in">
+              <span>MADE</span>
+              <p>5000+ stories</p>
+            </div>
+          </div>
+        </div>
+        <div class="order check">
+          <div class="pulse"></div>
+          <p>GET IN TOUCH</p>
+        </div>
+      </div>
+      <div class="left-main-show">
+        <div class="fade-in">
+          <span>MOUNTED</span>
+          <p>2000+ reels</p>
+        </div>
+        <div class="fade-in">
+          <span>CONDUCTED</span>
+          <p>550+ shootings</p>
+        </div>
+        <div class="fade-in">
+          <span>MADE</span>
+          <p>5000+ stories</p>
+        </div>
+      </div>
+
+      <div class="incline">
+        <div class="top-incline p-exp">
+          <p>IF YOU'RE</p>
+        </div>
+
+        <div class="cont-incline">
+          <div class="scrolling-content">
+            <div class="item-incline1">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Selling services</p>
+            </div>
+            <div class="item-incline2">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Expert</p>
+            </div>
+            <div class="item-incline3">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Freelancer</p>
+            </div>
+            <div class="item-incline4">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Blogger</p>
+            </div>
+            <div class="item-incline5">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Doing business</p>
+            </div>
+            <div class="item-incline6">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>SMM specialist</p>
+            </div>
+            <div class="item-incline1">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Selling services</p>
+            </div>
+            <div class="item-incline2">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Expert</p>
+            </div>
+            <div class="item-incline3">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Freelancer</p>
+            </div>
+            <div class="item-incline4">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Blogger</p>
+            </div>
+            <div class="item-incline5">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>Doing business</p>
+            </div>
+            <div class="item-incline6">
+              <img src="../imgs/gold-coin.svg" alt="" />
+              <p>SMM specialist</p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-incline">
+          <p>
+            The average person who wants to start developing themselves and
+            their blog, to find themselves
+          </p>
+        </div>
+      </div>
+      <div class="how-working">
+        <div class="title-working subtitle">
+          <p>How do we work?</p>
+          <span>ONLINE OR OFFLINE SUPPORT WITHIN ONE MONTH</span>
+        </div>
+        <div class="con-working">
+          <div class="con-offline">
+            <div class="offline">
+              <div class="back-red-con"></div>
+              <div class="title-off"><span>Offline</span></div>
+              <ul>
+                <li class="item-off fade-in">
+                  <p>
+                    <span>15 </span> thematic reels with a written strategy and
+                    filmed and edited content.
+                  </p>
+                </li>
+                <li class="item-off fade-in">
+                  <p><span>60 </span>meaningful authentic stories.</p>
+                </li>
+                <li class="item-off fade-in">
+                  <p>Created content plan for<span> 30 </span>calendar days.</p>
+                </li>
+                <li class="item-off fade-in">
+                  Brand book - packaged according to the theme of your business.
+                </li>
+                <li class="item-off fade-in">
+                  A prescribed concept on the theme of your blog: highlites,
+                  profile header, unpacking the personality and authenticity of
+                  the business.
+                </li>
+                <li class="item-off fade-in">
+                  Defining your brand's mission, dna, archetype.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="img-workig">
+            <img src="../imgs/coin.webp" alt="coin" loading="lazy" />
+          </div>
+
+          <div class="con-online">
+            <img src="../imgs/Ellipse 80.svg" alt="w" class="yell" />
+            <div class="online">
+              <div class="title-on"><span>Online</span></div>
+              <ul>
+                <li class="item-on fade-in">
+                  <p>
+                    <span>15 </span> thematic rils with a written strategy with
+                    filmed and edited content. The material is provided by you.
+                  </p>
+                  <div class="item-img">
+                    <img src="../imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p><span>60 </span> eaningful authentic storis.</p>
+                  <div class="item-img">
+                    <img src="../imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p>Created content plan for<span> 30 </span>calendar days.</p>
+                  <div class="item-img">
+                    <img src="../imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p>
+                    Brand book - packaged according to the theme of your
+                    business.
+                  </p>
+                  <div class="item-img">
+                    <img src="../imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p>
+                    A prescribed concept on the theme of your blog: highlites,
+                    profile header, unpacking the personality and authenticity
+                    of the business.
+                  </p>
+                  <div class="item-img">
+                    <img src="../imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p>Defining your brand's mission, dna, archetype.</p>
+                  <div class="item-img">
+                    <img src="../imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="format" id="format">
+            <div class="back-format">
+              <img
+                src="../imgs/Default_minimalistic_3d_icon_of_calendar_with_small_gradient_i_0_51c03d6f-e525-4f85-bb15-22aed8d98dd (1).webp"
+                alt=""
+              />
+            </div>
+            <div class="con-format">
+              <div class="text-format format-tx1">
+                <div class="format-wz">FORMAT OF INTERACTION</div>
+                <div class="format-wz2">FORMAT OF INTERACTION</div>
+                <div class="format-wz">FORMAT OF INTERACTION</div>
+              </div>
+              <div class="mid-format">
+                <p>
+                  We will have an individual format of cooperation with you.
+                  After all, your project has its own history and values, which
+                  are different from others.
+                </p>
+              </div>
+            </div>
+            <div class="sets">
+              <p>BUT AT THE CORE, IT COULD BE ONE OF FOUR SETS:</p>
+              <div class="con-sets">
+                <div class="item-set1 fade-in">
+                  <div class="top-item-set">
+                    <div>THIS IS BAZA</div>
+                    <div>Set 1</div>
+                  </div>
+                  <div class="main-item-set">
+                    <li>Creating a <span>marketing strategy</span></li>
+                    <li>Brand positioning: <span>mission, values </span></li>
+                    <li>Packaging page  </li>
+                    <li>
+                      <span>Brand book</span> - packaged according to the theme
+                      of your business
+                    </li>
+                    <li>Creating a <span>content plan</span></li>
+                    <li>Video scripts</li>
+                    <li>Account statistics</li>
+                    <li><span>Monthly</span> report</li>
+                  </div>
+                  <img
+                    src="../imgs/Default_hyper_minimalistic_icon_of_one_coin_in_green_tones_wit_0.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="item-set2 fade-in">
+                  <div class="top-item-set">
+                    <div>Promotion</div>
+                    <div>Set 2</div>
+                  </div>
+                  <div class="main-item-set">
+                    <li>Creating a <span>marketing strategy</span></li>
+                    <li>Recommendations for page packaging</li>
+                    <li><span>Writing TOR</span> for creatives</li>
+                    <li>Creating creatives and launching targeting</li>
+                    <li>
+                      <span>Constant monitoring</span> of advertising cabinet
+                      statistics
+                    </li>
+                    <li>Monthly report</li>
+                  </div>
+                  <img
+                    src="../imgs/Default_hyper_minimalistic_icon_of_two_coins_in_white_tones_wi_1.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="item-set3 fade-in">
+                  <div class="top-item-set">
+                    <div>ALL IN CLUSIVE</div>
+                    <div>Set 3</div>
+                  </div>
+                  <div class="main-item-set">
+                    <li>Creating a <span>marketing strategy </span></li>
+                    <li>Page <span>packaging</span>  </li>
+                    <li>
+                      <span>Brand book</span> - packaged according to the theme
+                      of your business
+                    </li>
+                    <li>Creating a <span>content plan</span></li>
+                    <li>Video scripts</li>
+                    <li>Account <span>statistics</span></li>
+                    <li>Creating creatives and launching targeting</li>
+                    <li>
+                      <span>Constant monitoring</span> of advertising cabinet
+                      statistics
+                    </li>
+                    <li>Monthly report</li>
+                  </div>
+                  <img
+                    src="../imgs/Default_hyper_minimalistic_icons_of_a_lot_of_coins_in_yellow_t_1.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="item-set4 fade-in">
+                  <div class="top-item-set">
+                    <div>FOR ME - TURNKEY SHOOTING</div>
+                    <div>Set 4</div>
+                  </div>
+                  <div class="main-item-set">
+                    <li>Agreeing on an idea for a shoot</li>
+                    <li>Searching for <span>references</span></li>
+                    <li>Choosing a studio  </li>
+                    <li>Working with a <span>stylist</span></li>
+                    <li>Approval of <span>photographer/videographer </span></li>
+                    <li>Makeup/styling</li>
+                    <li>
+                      Receive <span>source material</span> and<br />
+                      20 processed photos/3 finished videos
+                    </li>
+                  </div>
+                  <img
+                    src="../imgs/Default_hyper_minimalistic_icons_of_a_lot_of_coins_in_red_tone_1.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="add-services">
+                <p>ADDITIONAL SERVICES</p>
+                <div class="con-add-services">
+                  <div class="fade-in">Organization and filming</div>
+                  <div class="fade-in">Analysis of niche, CA, competitors</div>
+                  <div class="fade-in">
+                    Maintain a TicToc or other social media account
+                  </div>
+                  <div class="fade-in">Answers in Direct</div>
+                  <div class="fade-in">Sales scripting</div>
+                  <div class="fade-in">Customizing chatbot funnels</div>
+                  <div class="fade-in">Website creation</div>
+                </div>
+              </div>
+              <div class="needs">
+                <div class="need-text">AND MUCH MORE FOR THE NEEDS</div>
+                <a href="#tarifs"
+                  ><div class="order check">
+                    <div class="pulse"></div>
+                    <p>BOOK A CONSULTATION</p>
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="history" id="history">
+            <div class="title-history subtitle">The story of my company</div>
+
+            <div class="top-history">
+              <div class="img-left-history">
+                <div class="left-text-img">
+                  <div>Kristina</div>
+                  <div>Kristina</div>
+                  <div>Kristina</div>
+                </div>
+                <div class="top-text-img">
+                  <div>Kristina</div>
+                  <div>Kristina</div>
+                  <div>Kristina</div>
+                </div>
+                <img
+                  src="../imgs/IMG_1261_1_-removebg.webp"
+                  alt="d"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="right-top-history">
+                <div class="con-right-history">
+                  <div class="name-history fade-in">
+                    <p>MY NAME IS</p>
+                    <span>Kristina</span>
+                  </div>
+                  <div class="age-history fade-in">
+                    <p>AND I’M</p>
+                    <span>23 Y.O.</span>
+                  </div>
+                </div>
+                <div class="experience-history fade-in">
+                  <div class="num-exp">
+                    <div class="num46">4</div>
+                    <div class="num5">5</div>
+                    <div class="num46">6</div>
+                  </div>
+                  <div class="text-exp">
+                    <p>years of experience in the SMM niche</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="results">
+            <div class="title-results">
+              <p>DESPITE MY YOUNG AGE</p>
+              <h3>I've achieved these results</h3>
+            </div>
+            <div class="con-results">
+              <div class="item-results1 fade-in">
+                <div class="left-result">
+                  <span>Education journalist</span>
+                  <p>KYIV NATIONAL UNIVERSITY OF CULTURE AND ARTS</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="../imgs/Default_imagine_minimalistic_3d_icon_of_camera_in_red_tones_wi_0_4b7dc958-d386-4141-b905-fb5db2f3591.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="item-results2 fade-in">
+                <div class="left-result">
+                  <span
+                    >"School of professions for girls." storis-maker, design,
+                    stop-motion.</span
+                  >
+                  <p>ELINA CHEBOTAREVA'S COURSE</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="../imgs/Default_simple_minimalistic_3d_icon_of_book_of_videoshooting_w_0_fa3817cc-7317-4c5d-a71b-f76f8c08f793_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="item-results3 fade-in">
+                <div class="left-result">
+                  <span>EDUCATION CYBERSECURITY</span>
+                  <p>KYIV NATIONAL UNIVERSITY OF CULTURE AND ARTS</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="../imgs/Default_imagine_minimalistic_3d_icon_of_laptop_in_yellow_tones_1_f03a176d-e874-4c81-9f34-4121351e4add_0.webp"
+                    alt="laptop"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results4 fade-in">
+                <div class="left-result">
+                  <span>United Creative Kingdom: Creative Director</span>
+                  <p>COURSE FROM MARGO YAFARKIN</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="../imgs/Default_simple_minimalistic_3d_icon_of_book_in_red_tones_with_0_58cf3eea-9200-49a8-afd9-db47dc002d65_0.webp"
+                    alt="laptop"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results5 fade-in">
+                <div class="left-result">
+                  <span>Video editing course and videography</span>
+                  <p>FROM MARGARITA ZAVALKO</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="../imgs/Default_simple_minimalistic_3d_icon_of_book_of_videoshooting_w_0_fa3817cc-7317-4c5d-a71b-f76f8c08f793_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results6 fade-in">
+                <div class="left-result">
+                  <span>Course "Marketing for a Million"</span>
+                  <p>LERA RUMA</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="../imgs/Default_simple_minimalistic_3d_icon_of_megaphone_from_which_co_1_c674ad1d-9ca7-40fc-b34c-8c8f0e87b9ef_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results7 fade-in">
+                <div class="left-result">
+                  <span>Reels course</span>
+                  <p>NIKITA BATMANOV</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="../imgs/Default_simple_minimalistic_3d_icon_of_icon_of_instagram_reels_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results8 fade-in">
+                <div class="left-result">
+                  <span>“StorySelling” course</span>
+                  <p>ELENA ASTAKHOVA</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="../imgs/Default_simple_minimalistic_3d_icon_of_book_of_videoshooting_w_0_fa3817cc-7317-4c5d-a71b-f76f8c08f793_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="aboutme">
+          <div class="about-back-or"></div>
+          <div class="about-back-wh"></div>
+          <div class="text-about">
+            <div class="con-text-about">
+              <p>
+                Ever since I was a child, I dreamed of becoming a
+                <span class="sp-aboutg">journalist</span>, so that I could go on
+                television and cover the country's news and events on a wide
+                variety of topics.
+              </p>
+              <p>
+                Now I share my reports on
+                <span class="sp-aboutg">Instagram</span> and help others to do
+                the same.
+              </p>
+              <p>
+                My first job was at the digital agency
+                <span class="sp-aboutr">“247”</span>, where I held the position
+                of <span class="sp-abouty">SMM specialist</span> since I was
+                <span class="sp-abouty">17 years</span> old.
+              </p>
+            </div>
+            <div class="top-about">
+              <div><p>ABOUT ME</p></div>
+              <div><p>ABOUT ME</p></div>
+              <div><p>ABOUT ME</p></div>
+              <div><p>ABOUT ME</p></div>
+              <div><p>ABOUT ME</p></div>
+              <div><p>ABOUT ME</p></div>
+              <div><p>ABOUT ME</p></div>
+              <div><p>ABOUT ME</p></div>
+              <div><p>ABOUT ME</p></div>
+            </div>
+            <div class="bottom-about">
+              <p class="p-about-bottom">MANAGED MULTIPLE PAGES</p>
+              <div class="con-about-bottom">
+                <div>Coffee shop franchises</div>
+                <div>Journals</div>
+                <div>Events</div>
+              </div>
+              <br />
+              <br />
+              <br />
+              <p class="p-about-bottom">DEVELOPED</p>
+              <div class="con-about-bottom pab">
+                <div>Content plans</div>
+                <div>New ideas</div>
+                <div>Organized shoots and trips to other cities</div>
+              </div>
+            </div>
+            <div class="passion">
+              <div class="con-passion">
+                <div>MY ADDICTION</div>
+                <p>DEVELOPING AND BUILDING A GREAT TEAM</p>
+              </div>
+              <img src="../imgs/gr.webp" alt="" />
+            </div>
+            <div class="prop-about">
+              <p>
+                At the age of <span>21</span>, I began my
+                <span>career as a journalist</span> with a government agency,
+                the <span>Department of Justice</span>, working in the
+                Department of Corrections, interacting with teenage prisoners.
+                It was my quest to develop
+                <span>skills in communication, negotiation</span>
+                and learning about different personality types.
+              </p>
+            </div>
+            <div class="bottom-prop-about">
+              <div class="left-bpa"></div>
+              <div class="right-bpa">
+                <p class="fade-in">
+                  <img
+                    class="fade-in"
+                    src="../imgs/Default_simple_minimalistic_3d_icon_of_megaphone_in_yellow_ton_1_31cc074e-5097-4440-8713-3e5fd2b2d1a.webp"
+                    alt="d"
+                    loading="lazy"
+                  />
+                  I moved to Poland at the age of <span>22</span> and continued
+                  working in <span>SMM</span>. My clients include employment,
+                  cleaning companies, water utilities, dentistry, visa services
+                  and personal counseling. I am also involved in an offline
+                  project <span>@krasivo.project.</span>
+                </p>
+                <img
+                  src="../imgs/Ellipse-80.webp"
+                  alt="d"
+                  class="yell"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="passion pass-bott">
+          <div class="con-passion">
+            <div>MY MISSION</div>
+            <p>
+              AUTHENTICALLY UNCOVER PERSONAL AND CORPORATE BRANDS, USING
+              JOURNALISTIC SKILLS AND SMM EXPERIENCE.
+            </p>
+          </div>
+          <img src="../imgs/yellow.webp" alt="" loading="lazy" />
+        </div>
+        <!--<div class="certificate">
+          <div class="text-certificate">
+            <p>My certificates</p>
+          </div>
+          <div class="certificates" id="reviews">
+            <div class="cer1 fade-in">
+              <img src="../imgs/ser1.webp" alt="Certificate 1" />
+            </div>
+            <div class="cer2 fade-in">
+              <img src="../imgs/ser2.webp" alt="Certificate 2" />
+            </div>
+            <div class="cer3 fade-in">
+              <img src="../imgs/ser3.webp" alt="Certificate 3" />
+            </div>
+          </div>
+        </div>-->
+        <div class="result">
+          <h2>At the end of working with my company, you will:</h2>
+          <div class="con-rusult">
+            <div class="left-results">
+              <div class="item-result fade-in">
+                <span
+                  >Pack with expert, authentic blogging or business blogs</span
+                >
+              </div>
+              <div class="item-result fade-in">
+                <span>Increase brand and personal blog awareness</span>
+              </div>
+              <div class="item-result fade-in">
+                <span>Start attracting new audiences</span>
+              </div>
+              <div class="item-result fade-in">
+                <span>Uncover your blog in an authentic way</span>
+              </div>
+              <div class="item-result fade-in">
+                <span>Define the DNA, mission and archetype of the brand</span>
+              </div>
+            </div>
+            <div class="right-results fade-in"></div>
+          </div>
+        </div>
+        <div class="tarif" id="tarifs">
+          <div class="head-tarif">
+            <h2>Counseling</h2>
+            <p>CHOOSE A TARIFF BASED ON YOUR REQUEST</p>
+          </div>
+          <div class="slider-tarif">
+            <div class="slider-item3">
+              <div class="sli-head">
+                <img src="../imgs/Group.webp" alt="6gr" />
+                <p>One-time consultation</p>
+              </div>
+              <div class="sli-price">
+                <p>150$</p>
+                <div>2 HOURS</div>
+              </div>
+              <div class="sli-button order check">
+                <div class="pulse"></div>
+                <p>BOOK A CONSULTATION</p>
+              </div>
+              <div class="sli-main">
+                <ul>
+                  <li>Unpacking the identity or business authenticity</li>
+                  <li>
+                    Page analysis (profile header, visuals, highlites, branded
+                    fonts and colors)
+                  </li>
+
+                  <li>Finished content plan document for the week</li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-item4">
+              <div class="sli-head">
+                <img src="../imgs/Vector.webp" alt="8gr" />
+                <p>VIP consultation</p>
+              </div>
+              <div class="sli-price">
+                <p>300$</p>
+                <div>5 HOURS</div>
+              </div>
+              <div class="sli-button order check">
+                <div class="pulse"></div>
+                <p>BOOK A CONSULTATION</p>
+              </div>
+              <div class="sli-main">
+                <ul>
+                  <li>Define the archetype, the dna, brand mission</li>
+                  <li>
+                    Unpacking the personality or authenticity of a business
+                  </li>
+                  <li>
+                    Page analysis (profile header, visuals, highlites, branded
+                    fonts and colors)
+                  </li>
+                  <li>Finished content plan document for the week</li>
+                </ul>
+                <div>
+                  <span>GIFT</span>
+                  <p>
+                    Get a complete brand characterization. If needed, find a
+                    brand mascot and define communication rules and TOV.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="indicators"></div>
+        </div>
+        <div class="what-else">
+          <!--<div class="waht-back-yel" loading="lazy"></div>
+          <div class="waht-back-gr" loading="lazy"></div>
+          <div class="waht-back-red" loading="lazy"></div>-->
+          <div class="what-else-text top-wet">
+            <div>What else is included?</div>
+            <div>What else is included?</div>
+            <div>What else is included?</div>
+          </div>
+          <div class="what-else-text">
+            <div>What else is included?</div>
+            <div>What else is included?</div>
+            <div>What else is included?</div>
+          </div>
+          <div class="else-item1">
+            <div class="left-else">
+              <img
+                src="../imgs/Default_simple_minimalistic_3d_icon_of_a_statistics_chart_in_y_1_fe4d79ef-bc80-46a0-bbbb-2e48f98c76c2_0.webp"
+                alt=""
+                loading="lazy"
+              />
+              <p>Report channel</p>
+            </div>
+            <div class="right-else">
+              <ul>
+                <li class="fade-in">Storis stats</li>
+                <li class="fade-in">Reels statistics</li>
+                <li class="fade-in">Subscriber statistics</li>
+              </ul>
+            </div>
+          </div>
+          <div class="else-item2">
+            <div class="left-else">
+              <img
+                src="../imgs/Default_simple_minimalistic_3d_icon_of_a_message_in_green_tone_0_ee3a7e2f-101a-4c19-bf37-6efdb6de099c_0.webp"
+                alt=""
+                loading="lazy"
+              />
+              <p>Chat with the team</p>
+            </div>
+            <div class="right-else">
+              <ul>
+                <li class="fade-in">Discussions</li>
+                <li class="fade-in">Recommendations</li>
+                <li class="fade-in">Edits</li>
+              </ul>
+            </div>
+          </div>
+          <div class="else-item3">
+            <div class="left-else">
+              <img
+                src="../imgs/Default_simple_minimalistic_3d_icon_of_a_handshake_in_red_tone_0_6d4e6798-ad1b-44c8-8487-65e4b3203170_0.webp"
+                alt=""
+                loading="lazy"
+              />
+              <p>Dating profile</p>
+            </div>
+            <div class="right-else">
+              <ul>
+                <li class="fade-in">With you</li>
+                <li class="fade-in">With your brand</li>
+                <li class="fade-in">Identification of need</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="order kris-button check">
+          <div class="pulse"></div>
+          <p>I WANT TO CHRISTINA</p>
+        </div>
+        <div class="block-incline">
+          <p>
+            If we do not fulfill the obligations set out in the contract,
+            <span>we are obliged to give the money back.</span>
+          </p>
+        </div>
+        <div class="cases" id="cases">
+          <div class="cases-head">
+            <h2>A few of my cases</h2>
+          </div>
+          <div class="con-cases">
+            <div class="case1">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="../imgs/vlcsnap-2024-04-07-13h35m03s106.webp"
+                data-setup="{}"
+              >
+                <source src="../video/vid1.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case2">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="../imgs/vlcsnap-2024-04-07-13h53m07s466.webp"
+                data-setup="{}"
+              >
+                <source src="../video/vid2.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case3">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="../imgs/vlcsnap-2024-04-07-13h47m52s771.webp"
+                data-setup="{}"
+              >
+                <source src="../video/vid3.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case4">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="../imgs/vlcsnap-2024-04-07-14h02m35s360.webp"
+                data-setup="{}"
+              >
+                <source src="../video/vid4.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case5">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="../imgs/vlcsnap-2024-04-07-14h01m13s510.webp"
+                data-setup="{}"
+              >
+                <source src="../video/vid5.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case6">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="../imgs/vlcsnap-2024-04-07-13h48m29s893.webp"
+                data-setup="{}"
+              >
+                <source src="../video/vid6.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="klients">
+          <h2>My satisfied customers</h2>
+          <div class="con-klients">
+            <div class="klient1">
+              <div class="top-klient">
+                <img src="../imgs/emoj/112.svg" alt="" />
+                <img src="../imgs/emoj/1.svg" alt="" class="heart-emoj" />
+              </div>
+              <div class="star">
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+              </div>
+              <p>The consultation was very interesting and very informative</p>
+              <p>
+                It feels like you are very good at this!
+                <img src="../imgs/emoj/image 4.svg" alt="" />
+                <img src="../imgs/emoj/heart.svg" alt="" />
+              </p>
+              <p>
+                As a psychologist and as a SMM consultant you were.
+                <img src="../imgs/emoj/smile.svg" alt="" />
+              </p>
+              <p>
+                That's very important, as far as I'm concerned.
+                <img src="../imgs/emoj/image 6.svg" alt="" />
+              </p>
+              <p>
+                You are easy to communicate with and very pleasant I liked it
+                all very much!
+              </p>
+            </div>
+            <div class="klient2">
+              <div class="top-klient">
+                <img src="../imgs/emoj/114.svg" alt="" />
+                <img src="../imgs/emoj/1.svg" alt="" class="heart-emoj" />
+              </div>
+              <div class="star">
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+              </div>
+              <p>Christina, you're golden!</p>
+              <p>You're the bomb.</p>
+            </div>
+            <div class="klient3">
+              <div class="top-klient">
+                <img src="../imgs/emoj/116.svg" alt="" />
+                <img src="../imgs/emoj/1.svg" alt="" class="heart-emoj" />
+              </div>
+              <div class="star">
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="../imgs/emoj/star-solid 10.svg" alt="" />
+              </div>
+              <p>
+                Thank you very much for your work
+                <img src="../imgs/emoj/fireheart.svg" alt="" />
+              </p>
+              <p>
+                I was very pleased with the result!
+                <img src="../imgs/emoj/fire8.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="slider-dots"></div>
+        </div>
+        <footer>
+          <div class="footer-left">
+            <div class="footer-back"></div>
+            <div class="main-title footer-text">
+              <p>SMM agency</p>
+              <span>LYAM</span>
+            </div>
+            <div class="order butt-footer check">
+              <div class="pulse check"></div>
+              <p>BECOME A SUCCESSFUL CASE STUDY</p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="img-footer">
+              <div class="foot-icons">
+                <a href="mailto:lyam.agency24@gmail.com" target="_blank"
+                  ><img src="../imgs/iconf3.svg" alt=""
+                /></a>
+                <a
+                  href="https://www.instagram.com/k.yakovenko_?igsh=MTBhYTdwOWU5bmY4aA=="
+                  target="_blank"
+                  ><img src="../imgs/iconf2.svg" alt=""
+                /></a>
+                <a href="https://t.me/Kris_yakovenko" target="_blank"
+                  ><img src="../imgs/iconf1.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
