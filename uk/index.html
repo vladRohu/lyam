@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LYAM</title>
+    <link rel="icon" type="image/img" href="imgs/logo.webp" />
+    <link rel="stylesheet" href="css/video-js.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style-uk.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"
+      defer
+    ></script>
+    <script src="https://vjs.zencdn.net/8.10.0/video.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/viever-js.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="back">
+      <div class="blur-background"></div>
+      <div id="form" class="popup">
+        <div class="form">
+          <div id="close_form"><img src="svgs/Vector (8).svg" /></div>
+          <h3>ЗАЛИШИТИ ЗАЯВКУ</h3>
+          <div class="group-form">
+            <input
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              id="name"
+              placeholder="Ім'я"
+              required
+            />
+          </div>
+          <div class="group-form">
+            <input
+              type="text"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Нік у Телеграмі"
+              id="nick"
+            />
+          </div>
+          <div class="group-form">
+            <input
+              type="tel"
+              autocomplete="off"
+              spellcheck="false"
+              id="phone"
+              placeholder="Номер"
+              required
+            />
+          </div>
+          <div class="group-form">
+            <div class="select-wrapper">
+              <select id="service" class="custom-select" required>
+                <option value="">Послуга</option>
+                <option value="Сет 1">Сет 1</option>
+                <option value="Сет 2">Сет 2</option>
+                <option value="Сет 3">Сет 3</option>
+                <option value="Сет 4">Сет 4</option>
+                <option value="Разовая консультация">
+                  Разова консультація
+                </option>
+                <option value="VIP-консультация">VIP-консультація</option>
+              </select>
+            </div>
+          </div>
+          <div id="send_form_data" class="submit-btn" disabled>Відправити</div>
+        </div>
+      </div>
+      <div id="notification" class="notification">
+        <div class="notification-content">
+          <img src="svgs/icons8.svg" alt="Checkmark" />
+          <span>Заявка відправлна!</span>
+        </div>
+      </div>
+      <div class="back-gr"></div>
+      <div class="back-yell"></div>
+      <div id="mobile-header" class="mobile-header">
+        <div class="lyam">
+          <a href="#top">LYAM</a>
+        </div>
+        <div id="close" class="close">
+          <img src="svgs/close.svg" alt="Close" />
+        </div>
+        <div class="con-mobile-header">
+          <img src="imgs/green.webp" alt="Green" class="green" />
+          <img src="imgs/yellow.webp" alt="Yellow" class="yellow" />
+          <div><a href="#format">ФОРМАТ</a></div>
+          <div><a href="#history">ІСТОРІЯ</a></div>
+          <div><a href="#tarifs">ТАРИФИ</a></div>
+          <div><a href="#cases">КЕЙСИ</a></div>
+        </div>
+        <div class="leng mb-leng">
+          <a href="#" data-lang="en">EN</a>
+          <a href="#" data-lang="uk">UK</a>
+          <a href="#" data-lang="ru">RU</a>
+        </div>
+        <!--<img
+          src="imgs/en-icon-of-instagram-with-red-neon-0.webp"
+          alt=""
+          class="icon-inst"
+          loading="lazy"
+        />-->
+      </div>
+      <div class="header">
+        <div class="lyam">
+          <a href="#top">LYAM</a>
+        </div>
+        <div class="menu">
+          <div><a href="#format">ФОРМАТ</a></div>
+          <div><a href="#history">ІСТОРІЯ</a></div>
+          <div><a href="#tarifs">ТАРИФИ</a></div>
+          <div><a href="#cases">КЕЙСИ</a></div>
+        </div>
+        <div class="leng">
+          <a href="#" data-lang="en">EN</a>
+          <a href="#" data-lang="uk">UK</a>
+          <a href="#" data-lang="ru">RU</a>
+        </div>
+        <div id="menu_mobile">
+          <img src="imgs/menu.svg" alt="" />
+        </div>
+      </div>
+
+      <div class="main" id="top">
+        <div class="main-title">
+          <p>SMM-агентство</p>
+          <span>LYAM</span>
+        </div>
+        <div class="intro-img">
+          <img
+            src="imgs/en-icon-of-instagram-with-red-neon-0.webp"
+            alt=""
+            loading="lazy"
+          />
+          <div class="text-intro fade-in">
+            <p>
+              Запакуй блог, що продає, набери 1000 підписників і отримуй потік
+              клієнтів.
+            </p>
+          </div>
+          <div class="left-main">
+            <div class="fade-in">
+              <span>ЗМОНТОВАНО</span>
+              <p>2000+ рілсів</p>
+            </div>
+            <div class="fade-in">
+              <span>ПРОВЕДЕНО</span>
+              <p>550+ зйомок</p>
+            </div>
+            <div class="fade-in">
+              <span>ЗРОБЛЕНО</span>
+              <p>5000+ сторіс</p>
+            </div>
+          </div>
+        </div>
+        <div class="order check">
+          <div class="pulse"></div>
+          <p>ЗВ'ЯЗАТИСЯ</p>
+        </div>
+      </div>
+      <div class="left-main-show">
+        <div class="fade-in">
+          <span>ЗМОНТОВАНО</span>
+          <p>2000+ рілсів</p>
+        </div>
+        <div class="fade-in">
+          <span>ПРОВЕДЕНО</span>
+          <p>550+ зйомок</p>
+        </div>
+        <div class="fade-in">
+          <span>ЗРОБЛЕНО</span>
+          <p>5000+ сторіс</p>
+        </div>
+      </div>
+
+      <div class="incline">
+        <div class="top-incline p-exp">
+          <p>ЯКЩО ТИ</p>
+        </div>
+
+        <div class="cont-incline">
+          <div class="scrolling-content">
+            <div class="item-incline1">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Продаєш послуги</p>
+            </div>
+            <div class="item-incline2">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Експерт</p>
+            </div>
+            <div class="item-incline3">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Фрілансер</p>
+            </div>
+            <div class="item-incline4">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Блогер</p>
+            </div>
+            <div class="item-incline5">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Ведеш бізнес</p>
+            </div>
+            <div class="item-incline6">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>SMM-спеціаліст</p>
+            </div>
+            <div class="item-incline1">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Продаєш послуги</p>
+            </div>
+            <div class="item-incline2">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Експерт</p>
+            </div>
+            <div class="item-incline3">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Фрілансер</p>
+            </div>
+            <div class="item-incline4">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Блогер</p>
+            </div>
+            <div class="item-incline5">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>Ведеш бізнес</p>
+            </div>
+            <div class="item-incline6">
+              <img src="imgs/gold-coin.svg" alt="" />
+              <p>SMM-спеціаліст</p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-incline">
+          <p>
+            Звичайна людина, яка хоче почати розвивати себе і свій блог, знайти
+            себе
+          </p>
+        </div>
+      </div>
+      <div class="how-working">
+        <div class="title-working subtitle">
+          <p>Як ми працюємо?</p>
+          <span>ОНЛАЙН АБО ОФЛАЙН СУПРОВІД У РАМКАХ ОДНОГО МІСЯЦЯ</span>
+        </div>
+        <div class="con-working">
+          <div class="con-offline">
+            <div class="offline">
+              <div class="back-red-con"></div>
+              <div class="title-off"><span>Офлайн</span></div>
+              <ul>
+                <li class="item-off fade-in">
+                  <p>
+                    <span>15 </span> тематичних рілсів із прописаною стратегією
+                    та відзнятим і змонтованим контентом.
+                  </p>
+                </li>
+                <li class="item-off fade-in">
+                  <p><span>60 </span> смислових автентичних сторіс.</p>
+                </li>
+                <li class="item-off fade-in">
+                  <p>
+                    Створений контент план на<span> 30 </span>календарних днів.
+                  </p>
+                </li>
+                <li class="item-off fade-in">
+                  Бренд-бук - упакований згідно з тематикою вашого бізнесу.
+                </li>
+                <li class="item-off fade-in">
+                  Прописана концепція за тематикою вашого блогу: хайлайтс, шапка
+                  профілю, розпакування особистості та автентичності бізнесу.
+                </li>
+                <li class="item-off fade-in">
+                  Визначаємо місію, днк, архетип вашого бренду.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="img-workig">
+            <img src="imgs/coin.webp" alt="coin" loading="lazy" />
+          </div>
+
+          <div class="con-online">
+            <img src="imgs/Ellipse 80.svg" alt="w" class="yell" />
+            <div class="online">
+              <div class="title-on"><span>Онлайн</span></div>
+              <ul>
+                <li class="item-on fade-in">
+                  <p>
+                    <span>15 </span> тематичних рілсів із прописаною стратегією
+                    з відзнятим і змонтованим контентом. Матеріал надається
+                    вами.
+                  </p>
+                  <div class="item-img">
+                    <img src="imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p><span>60 </span> смислових автентичних сторіс.</p>
+                  <div class="item-img">
+                    <img src="imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p>
+                    Створений контент план на<span> 30 </span>календарних днів.
+                  </p>
+                  <div class="item-img">
+                    <img src="imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p>
+                    Бренд-бук - упакований згідно з тематикою вашого бізнесу.
+                  </p>
+                  <div class="item-img">
+                    <img src="imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p>
+                    Прописана концепція за тематикою вашого блогу: хайлайтс,
+                    шапка профілю, розпакування особистості та автентичності
+                    бізнесу.
+                  </p>
+                  <div class="item-img">
+                    <img src="imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+                <li class="item-on fade-in">
+                  <p>Визначаємо місію, днк, архетип вашого бренду.</p>
+                  <div class="item-img">
+                    <img src="imgs/check-solid.webp" alt="" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="format" id="format">
+            <div class="back-format">
+              <img
+                src="imgs/Default_minimalistic_3d_icon_of_calendar_with_small_gradient_i_0_51c03d6f-e525-4f85-bb15-22aed8d98dd (1).webp"
+                alt=""
+              />
+            </div>
+            <div class="con-format">
+              <div class="text-format format-tx1">
+                <div class="format-wz">ФОРМАТ ВЗАЄМОДІЇ</div>
+                <div class="format-wz">ФОРМАТ ВЗАЄМОДІЇ</div>
+                <div class="format-wz2">ФОРМАТ ВЗАЄМОДІЇ</div>
+                <div class="format-wz">ФОРМАТ ВЗАЄМОДІЇ</div>
+                <div class="format-wz">ФОРМАТ ВЗАЄМОДІЇ</div>
+              </div>
+              <div class="mid-format">
+                <p>
+                  З тобою у нас буде індивідуальний формат співпраці. Адже у
+                  твого проєкту своя історія та цінності, які не схожі на інші.
+                </p>
+              </div>
+            </div>
+            <div class="sets">
+              <p>АЛЕ В ОСНОВІ МОЖЕ БУТИ ОДИН ІЗ ЧОТИРЬОХ СЕТІВ:</p>
+              <div class="con-sets">
+                <div class="item-set1 fade-in">
+                  <div class="top-item-set">
+                    <div>THIS IS BAZA</div>
+                    <div>Сет 1</div>
+                  </div>
+                  <div class="main-item-set">
+                    <li>Створення <span>маркетингової стратегії</span></li>
+                    <li>Позиціонування бренду: <span>місія, цінності</span></li>
+                    <li>Пакування сторінки  </li>
+                    <li>
+                      <span>Бренд-бук</span>- упакований згідно з тематикою
+                      вашого бізнесу
+                    </li>
+                    <li>Створення <span>контент-плану</span></li>
+                    <li>Сценарії для відео</li>
+                    <li>Статистика акаунта </li>
+                    <li><span>Щомісячний</span> звіт</li>
+                  </div>
+                  <img
+                    src="imgs/Default_hyper_minimalistic_icon_of_one_coin_in_green_tones_wit_0.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="item-set2 fade-in">
+                  <div class="top-item-set">
+                    <div>PROДВИГ</div>
+                    <div>Сет 2</div>
+                  </div>
+                  <div class="main-item-set">
+                    <li>Створення <span>маркетингової стратегії</span></li>
+                    <li>Рекомендації щодо пакування сторінки</li>
+                    <li><span>Написання ТЗ</span> для креативів</li>
+                    <li>Створення креативів і запуск таргета</li>
+                    <li>
+                      <span>Постійні моніторинг</span> статистики рекламного
+                      кабінету
+                    </li>
+                    <li>Щомісячний звіт</li>
+                  </div>
+                  <img
+                    src="imgs/Default_hyper_minimalistic_icon_of_two_coins_in_white_tones_wi_1.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="item-set3 fade-in">
+                  <div class="top-item-set">
+                    <div>ALL IN КЛЮЗИВ</div>
+                    <div>Сет 3</div>
+                  </div>
+                  <div class="main-item-set">
+                    <li>Створення <span>маркетингової стратегії</span></li>
+                    <li><span>Пакування</span> сторінки  </li>
+                    <li>
+                      <span>Бренд-бук</span> - упакований згідно з тематикою
+                      вашого бізнесу.
+                    </li>
+                    <li>Створення <span>контент плану</span></li>
+                    <li>Сценарії для відео</li>
+                    <li><span>Статистика</span> акаунта</li>
+                    <li>Створення креативів і запуск таргета</li>
+                    <li>
+                      <span>Постійні моніторинг</span> статистики рекламного
+                      кабінету
+                    </li>
+                    <li>Щомісячний звіт</li>
+                  </div>
+                  <img
+                    src="imgs/Default_hyper_minimalistic_icons_of_a_lot_of_coins_in_yellow_t_1.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+                <div class="item-set4 fade-in">
+                  <div class="top-item-set">
+                    <div>FOR ME - ЗЙОМКА ПІД КЛЮЧ</div>
+                    <div>Сет 4</div>
+                  </div>
+                  <div class="main-item-set">
+                    <li>Узгодження ідеї для зйомки</li>
+                    <li>Пошук <span>референсів</span></li>
+                    <li>Вибір студії  </li>
+                    <li>Робота зі <span>стилістом</span></li>
+                    <li>Затвердження <span>фотографа/відеографа</span></li>
+                    <li>Макіяж/укладка</li>
+                    <li>
+                      Отримуєте <span>початковий матеріал</span> і <br />
+                      20 оброблених фото/3 готових відео Reels
+                    </li>
+                  </div>
+                  <img
+                    src="imgs/Default_hyper_minimalistic_icons_of_a_lot_of_coins_in_red_tone_1.webp"
+                    alt=""
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="add-services">
+                <p>ДОДАТКОВІ ПОСЛУГИ</p>
+                <div class="con-add-services">
+                  <div class="fade-in">Організація та проведення зйомок</div>
+                  <div class="fade-in">Аналіз ніші, ЦА, конкурентів</div>
+                  <div class="fade-in">
+                    Ведення акаунта ТікТок або інших соціальних мереж
+                  </div>
+                  <div class="fade-in">Відповіді в Директ</div>
+                  <div class="fade-in">Прописання скриптів для продажу</div>
+                  <div class="fade-in">Налаштування чат-бот воронки</div>
+                  <div class="fade-in">Створення сайту</div>
+                </div>
+              </div>
+              <div class="needs">
+                <div class="need-text">І БАГАТО ІНШОГО ЗА ПОТРЕБИ</div>
+                <a href="#tarifs"
+                  ><div class="order check">
+                    <div class="pulse"></div>
+                    <p>ЗАМОВИТИ КОНСУЛЬТАЦІЮ</p>
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="history" id="history">
+            <div class="title-history subtitle">Історія моєї компанії</div>
+
+            <div class="top-history">
+              <div class="img-left-history">
+                <div class="left-text-img">
+                  <div>Христина</div>
+                  <div>Христина</div>
+                  <div>Христина</div>
+                </div>
+                <div class="top-text-img">
+                  <div>Христина</div>
+                  <div>Христина</div>
+                  <div>Христина</div>
+                </div>
+                <img
+                  src="imgs/IMG_1261_1_-removebg.webp"
+                  alt="d"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="right-top-history">
+                <div class="con-right-history">
+                  <div class="name-history fade-in">
+                    <p>МОЄ ІМ'Я</p>
+                    <span>Христина</span>
+                  </div>
+                  <div class="age-history fade-in">
+                    <p>І МЕНІ</p>
+                    <span>23 роки</span>
+                  </div>
+                </div>
+                <div class="experience-history fade-in">
+                  <div class="num-exp">
+                    <div class="num46">4</div>
+                    <div class="num5">5</div>
+                    <div class="num46">6</div>
+                  </div>
+                  <div class="text-exp"><p>років роботи в ніші SMM</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="results">
+            <div class="title-results">
+              <p>НЕ ДИВЛЯЧИСЬ НА МІЙ МОЛОДИЙ ВІК</p>
+              <h3>Я досягла таких результатів</h3>
+            </div>
+            <div class="con-results">
+              <div class="item-results1 fade-in">
+                <div class="left-result">
+                  <span>Освіта журналіста</span>
+                  <p>КИЇВСЬКИЙ НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ КУЛЬТУРИ І МИСТЕЦТВА</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="imgs/Default_imagine_minimalistic_3d_icon_of_camera_in_red_tones_wi_0_4b7dc958-d386-4141-b905-fb5db2f3591.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="item-results2 fade-in">
+                <div class="left-result">
+                  <span
+                    >"Школа професій для дівчат": сторіс-мейкер, дизайн,
+                    стоп-моушн.</span
+                  >
+                  <p>КУРС ЕЛІНИ ЧЕБОТАРЬОВОЇ</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="imgs/Default_simple_minimalistic_3d_icon_of_book_of_videoshooting_w_0_fa3817cc-7317-4c5d-a71b-f76f8c08f793_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div class="item-results3 fade-in">
+                <div class="left-result">
+                  <span>Освіта кібербезпеки</span>
+                  <p>КИЇВСЬКИЙ НАЦІОНАЛЬНИЙ УНІВЕРСИТЕТ КУЛЬТУРИ І МИСТЕЦТВА</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="imgs/Default_imagine_minimalistic_3d_icon_of_laptop_in_yellow_tones_1_f03a176d-e874-4c81-9f34-4121351e4add_0.webp"
+                    alt="laptop"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results4 fade-in">
+                <div class="left-result">
+                  <span>United Creative Kingdom: креативний директор</span>
+                  <p>КУРС ВІД МАРГО ЯФАРКІНА</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="imgs/Default_simple_minimalistic_3d_icon_of_book_in_red_tones_with_0_58cf3eea-9200-49a8-afd9-db47dc002d65_0.webp"
+                    alt="laptop"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results5 fade-in">
+                <div class="left-result">
+                  <span>Курс відеомонтажу та відеозйомки</span>
+                  <p>ВІД МАРГАРИТИ ЗАВАЛКО</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="imgs/Default_simple_minimalistic_3d_icon_of_book_of_videoshooting_w_0_fa3817cc-7317-4c5d-a71b-f76f8c08f793_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results6 fade-in">
+                <div class="left-result">
+                  <span>Курс "Маркетинг на мільйон"</span>
+                  <p>ВАЛЕРІЯ РУМА</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="imgs/Default_simple_minimalistic_3d_icon_of_megaphone_from_which_co_1_c674ad1d-9ca7-40fc-b34c-8c8f0e87b9ef_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results7 fade-in">
+                <div class="left-result">
+                  <span>Курс по Reels</span>
+                  <p>МИКИТА БАТМАНОВ</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="imgs/Default_simple_minimalistic_3d_icon_of_icon_of_instagram_reels_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+              <div class="item-results8 fade-in">
+                <div class="left-result">
+                  <span>Курс «StorySelling»</span>
+                  <p>ОЛЕНА АСТАХОВА</p>
+                </div>
+                <div class="right-result">
+                  <img
+                    src="imgs/Default_simple_minimalistic_3d_icon_of_book_of_videoshooting_w_0_fa3817cc-7317-4c5d-a71b-f76f8c08f793_0.webp"
+                    alt="camera"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="aboutme">
+          <div class="about-back-or"></div>
+          <div class="about-back-wh"></div>
+          <div class="text-about">
+            <div class="con-text-about">
+              <p>
+                З самого дитинства мріяла стати
+                <span class="sp-aboutg">журналісткою</span>, щоб виходити в ефір
+                телебачення, висвітлювати новини та події країни з
+                найрізноманітніших тем
+              </p>
+              <p>
+                Зараз я ділюся своїми репортажами в
+                <span class="sp-aboutg">Instagram</span> і допомагаю іншим людям
+                робити те саме
+              </p>
+              <p>
+                Моя перша робота була в digital-агентстві
+                <span class="sp-aboutr">“247”</span>, де я обіймала посаду
+                <span class="sp-abouty">SMM-специаліста</span> с
+                <span class="sp-abouty">17 років.</span>
+              </p>
+            </div>
+            <div class="top-about">
+              <div><p>ПРО МЕНЕ</p></div>
+              <div><p>ПРО МЕНЕ</p></div>
+              <div><p>ПРО МЕНЕ</p></div>
+              <div><p>ПРО МЕНЕ</p></div>
+              <div><p>ПРО МЕНЕ</p></div>
+              <div><p>ПРО МЕНЕ</p></div>
+              <div><p>ПРО МЕНЕ</p></div>
+              <div><p>ПРО МЕНЕ</p></div>
+              <div><p>ПРО МЕНЕ</p></div>
+            </div>
+            <div class="bottom-about">
+              <p class="p-about-bottom">КЕРУВАЛА КІЛЬКОМА СТОРІНКАМИ</p>
+              <div class="con-about-bottom">
+                <div>Франшизи кав'ярень</div>
+                <div>Журналів</div>
+                <div>Івентів</div>
+              </div>
+              <br />
+              <br />
+              <br />
+              <p class="p-about-bottom">РОЗРОБЛЯЛА</p>
+              <div class="con-about-bottom pab">
+                <div>Контент-плани</div>
+                <div>Нові ідеї</div>
+                <div>Організовувала зйомки та виїзди до інших міст</div>
+              </div>
+            </div>
+            <div class="passion">
+              <div class="con-passion">
+                <div>МОЯ ПРИСТРАСТЬ</div>
+                <p>РОЗВИТОК І ФОРМУВАННЯ ВЕЛИКОЇ КОМАНДИ.</p>
+              </div>
+              <img src="imgs/gr.webp" alt="" />
+            </div>
+            <div class="prop-about">
+              <p>
+                В <span>21 рік</span> я почала <span>кар'єру журналіста</span> у
+                державній установі - <span>Міністерстві юстиції</span>, працюючи
+                в департаменті з виконання покарань, взаємодіючи з
+                підлітками-ув'язненими. Це було моє прагнення до розвитку
+                <span>навичок комунікації, переговорів</span> вивчення різних
+                типів особистостей.
+              </p>
+            </div>
+            <div class="bottom-prop-about">
+              <div class="left-bpa"></div>
+              <div class="right-bpa">
+                <p class="fade-in">
+                  <img
+                    class="fade-in"
+                    src="imgs/Default_simple_minimalistic_3d_icon_of_megaphone_in_yellow_ton_1_31cc074e-5097-4440-8713-3e5fd2b2d1a.webp"
+                    alt="d"
+                    loading="lazy"
+                  />
+                  В <span>22 роки</span> переїхала до Польщі та продовжила
+                  роботу у<span>сфері SMM</span>. Мої клієнти включають
+                  працевлаштування, клінінгові компанії, водоканали,
+                  стоматологію, візові послуги та особисті консультації. Також
+                  займаюся офлайн-проектом <span>@krasivo.project</span>.
+                </p>
+                <img
+                  src="imgs/Ellipse-80.webp"
+                  alt="d"
+                  class="yell"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="passion pass-bott">
+          <div class="con-passion">
+            <div>МОЯ МІСІЯ</div>
+            <p>
+              АВТЕНТИЧНО РОЗКРИВАТИ ОСОБИСТИЙ І КОРПОРАТИВНИЙ БРЕНДИ,
+              ВИКОРИСТОВУЮЧИ ЖУРНАЛІСТСЬКІ НАВИЧКИ ТА ДОСВІД У SMM.
+            </p>
+          </div>
+          <img src="imgs/yellow.webp" alt="" loading="lazy" />
+        </div>
+        <!--<div class="certificate">
+          <div class="text-certificate">
+            <p>Мої сертифікати</p>
+          </div>
+          <div class="certificates" id="reviews">
+            <div class="cer1 fade-in">
+              <img src="imgs/ser1.webp" alt="Certificate 1" />
+            </div>
+            <div class="cer2 fade-in">
+              <img src="imgs/ser2.webp" alt="Certificate 2" />
+            </div>
+            <div class="cer3 fade-in">
+              <img src="imgs/ser3.webp" alt="Certificate 3" />
+            </div>
+          </div>
+        </div>-->
+        <div class="result">
+          <h2>За підсумком роботи з моєю компанією ви:</h2>
+          <div class="con-rusult">
+            <div class="left-results">
+              <div class="item-result fade-in">
+                <span
+                  >Упакували експертний, автентичний блог або бізнес-блог</span
+                >
+              </div>
+              <div class="item-result fade-in">
+                <span>Підвищили впізнаваність бренду та особистого блогу</span>
+              </div>
+              <div class="item-result fade-in">
+                <span>Почали залучати нову аудиторію</span>
+              </div>
+              <div class="item-result fade-in">
+                <span>Розкрили свій блог автентично</span>
+              </div>
+              <div class="item-result fade-in">
+                <span>Визначили ДНК, місію та архетип бренду</span>
+              </div>
+            </div>
+            <div class="right-results fade-in"></div>
+          </div>
+        </div>
+        <div class="tarif" id="tarifs">
+          <div class="head-tarif">
+            <h2>Консультації</h2>
+            <p>ВИБЕРІТЬ ТАРИФ ВИХОДЯЧИ З ВАШОГО ЗАПИТУ</p>
+          </div>
+          <div class="slider-tarif">
+            <div class="slider-item3">
+              <div class="sli-head">
+                <img src="imgs/Group.webp" alt="6gr" />
+                <p>Разова консультація</p>
+              </div>
+              <div class="sli-price">
+                <p>150$</p>
+                <div>2 ГОДИНИ</div>
+              </div>
+              <div class="sli-button order check">
+                <div class="pulse"></div>
+                <p>ЗАМОВИТИ КОНСУЛЬТАЦІЮ</p>
+              </div>
+              <div class="sli-main">
+                <ul>
+                  <li>Розпакування особистості або автентичності бізнесу</li>
+                  <li>
+                    Аналіз сторінки (шапка профілю, візуал, хайлайтс, фірмові
+                    шрифти та кольори)
+                  </li>
+                  <li>Готовий документ із контент-планом на тиждень</li>
+                </ul>
+              </div>
+            </div>
+            <div class="slider-item4">
+              <div class="sli-head">
+                <img src="imgs/Vector.webp" alt="8gr" />
+                <p>VIP-консультація</p>
+              </div>
+              <div class="sli-price">
+                <p>300$</p>
+                <div>5 ГОДИН</div>
+              </div>
+              <div class="sli-button order check">
+                <div class="pulse"></div>
+                <p>ЗАМОВИТИ КОНСУЛЬТАЦІЮ</p>
+              </div>
+              <div class="sli-main">
+                <ul>
+                  <li>Визначимо архетип, днк, місію бренду</li>
+                  <li>Розпакування особистості або автентичності бізнесу</li>
+                  <li>
+                    Аналіз сторінки (шапка профілю, візуал, хайлайтс, фірмові
+                    шрифти та кольори)
+                  </li>
+                  <li>Готовий документ із контент-планом на тиждень</li>
+                </ul>
+                <div>
+                  <span>ПОДАРУНОК</span>
+                  <p>
+                    Отримайте повну характеристику бренду. За потреби знайдемо
+                    маскота бренду і визначимо правила комунікації та TOV.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="indicators"></div>
+        </div>
+        <div class="what-else">
+          <!--<div class="waht-back-yel" loading="lazy"></div>
+          <div class="waht-back-gr" loading="lazy"></div>
+          <div class="waht-back-red" loading="lazy"></div>-->
+          <div class="what-else-text top-wet">
+            <div>Що ще входить?</div>
+            <div>Що ще входить?</div>
+            <div>Що ще входить?</div>
+          </div>
+          <div class="what-else-text">
+            <div>Що ще входить?</div>
+            <div>Що ще входить?</div>
+            <div>Що ще входить?</div>
+          </div>
+          <div class="else-item1">
+            <div class="left-else">
+              <img
+                src="imgs/Default_simple_minimalistic_3d_icon_of_a_statistics_chart_in_y_1_fe4d79ef-bc80-46a0-bbbb-2e48f98c76c2_0.webp"
+                alt=""
+                loading="lazy"
+              />
+              <p>Канал звіту</p>
+            </div>
+            <div class="right-else">
+              <ul>
+                <li class="fade-in">Статистика сторіс</li>
+                <li class="fade-in">Статистика reels</li>
+                <li class="fade-in">Статистика підписників</li>
+              </ul>
+            </div>
+          </div>
+          <div class="else-item2">
+            <div class="left-else">
+              <img
+                src="imgs/Default_simple_minimalistic_3d_icon_of_a_message_in_green_tone_0_ee3a7e2f-101a-4c19-bf37-6efdb6de099c_0.webp"
+                alt=""
+                loading="lazy"
+              />
+              <p>Чат із командою</p>
+            </div>
+            <div class="right-else">
+              <ul>
+                <li class="fade-in">Обговорення</li>
+                <li class="fade-in">Рекомендації</li>
+                <li class="fade-in">Правки</li>
+              </ul>
+            </div>
+          </div>
+          <div class="else-item3">
+            <div class="left-else">
+              <img
+                src="imgs/Default_simple_minimalistic_3d_icon_of_a_handshake_in_red_tone_0_6d4e6798-ad1b-44c8-8487-65e4b3203170_0.webp"
+                alt=""
+                loading="lazy"
+              />
+              <p>Анкета знайомства</p>
+            </div>
+            <div class="right-else">
+              <ul>
+                <li class="fade-in">З вами</li>
+                <li class="fade-in">З брендом</li>
+                <li class="fade-in">Виявлення потреби</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="order kris-button check">
+          <div class="pulse"></div>
+          <p>ХОЧУ ДО ХРИСТИНИ</p>
+        </div>
+        <div class="block-incline">
+          <p>
+            Якщо ми не виконуємо зобов'язання, встановлені в рамках договору,
+            <span>ми зобов'язуємося повернути гроші назад.</span>
+          </p>
+        </div>
+        <div class="cases" id="cases">
+          <div class="cases-head">
+            <h2>Кілька моїх кейсів</h2>
+          </div>
+          <div class="con-cases">
+            <div class="case1">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="imgs/vlcsnap-2024-04-07-13h35m03s106.webp"
+                data-setup="{}"
+              >
+                <source src="video/vid1.webm" type="video/webm" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case2">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="imgs/vlcsnap-2024-04-07-13h53m07s466.webp"
+                data-setup="{}"
+              >
+                <source src="video/vid2.webm" type="video/webm" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case3">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="imgs/vlcsnap-2024-04-07-13h47m52s771.webp"
+                data-setup="{}"
+              >
+                <source src="video/vid3.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case4">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="imgs/vlcsnap-2024-04-07-14h02m35s360.webp"
+                data-setup="{}"
+              >
+                <source src="video/vid4.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case5">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="imgs/vlcsnap-2024-04-07-14h01m13s510.webp"
+                data-setup="{}"
+              >
+                <source src="video/vid5.webm" type="video/webm" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+            <div class="case6">
+              <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="imgs/vlcsnap-2024-04-07-13h48m29s893.webp"
+                data-setup="{}"
+              >
+                <source src="video/vid6.webm" type="video/webm" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
+            </div>
+          </div>
+        </div>
+        <div class="klients">
+          <h2>Мої задоволені клієнти</h2>
+          <div class="con-klients">
+            <div class="klient1">
+              <div class="top-klient">
+                <img src="imgs/emoj/112.svg" alt="" />
+                <img src="imgs/emoj/1.svg" alt="" class="heart-emoj" />
+              </div>
+              <div class="star">
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+              </div>
+              <p>Консультація була дуже цікава і дуже інформативна</p>
+              <p>
+                Відчувається, що ти дуже хороша в цій справі!
+                <img src="imgs/emoj/image 4.svg" alt="" />
+                <img src="imgs/emoj/heart.svg" alt="" />
+              </p>
+              <p>
+                Ти як психологиня і як консультантка із СММ була
+                <img src="imgs/emoj/smile.svg" alt="" />
+              </p>
+              <p>
+                Це дуже важливо, як на мене З тобою легко спілкуватися і шалено
+                приємно <img src="imgs/emoj/image 6.svg" alt="" />
+              </p>
+              <p>Мені все дуже сподобалося!</p>
+            </div>
+            <div class="klient2">
+              <div class="top-klient">
+                <img src="imgs/emoj/114.svg" alt="" />
+                <img src="imgs/emoj/1.svg" alt="" class="heart-emoj" />
+              </div>
+              <div class="star">
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+              </div>
+              <p>Христина ти золото!</p>
+              <p>Просто бомба</p>
+            </div>
+            <div class="klient3">
+              <div class="top-klient">
+                <img src="imgs/emoj/116.svg" alt="" />
+                <img src="imgs/emoj/1.svg" alt="" class="heart-emoj" />
+              </div>
+              <div class="star">
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+                <img src="imgs/emoj/star-solid 10.svg" alt="" />
+              </div>
+              <p>
+                Спасибі велике за вашу роботу
+                <img src="imgs/emoj/fireheart.svg" alt="" />
+              </p>
+              <p>
+                Залишилася дуже задоволена результатом!
+                <img src="imgs/emoj/fire8.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="slider-dots"></div>
+        </div>
+        <footer>
+          <div class="footer-left">
+            <div class="footer-back"></div>
+            <div class="main-title footer-text">
+              <p>SMM-агентство</p>
+              <span>LYAM</span>
+            </div>
+            <div class="order butt-footer check">
+              <div class="pulse check"></div>
+              <p>СТАТИ УСПІШНИМ КЕЙСОМ</p>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="img-footer">
+              <div class="foot-icons">
+                <a href="mailto:lyam.agency24@gmail.com" target="_blank"
+                  ><img src="imgs/iconf3.svg" alt=""
+                /></a>
+                <a
+                  href="https://www.instagram.com/k.yakovenko_?igsh=MTBhYTdwOWU5bmY4aA=="
+                  target="_blank"
+                  ><img src="imgs/iconf2.svg" alt=""
+                /></a>
+                <a href="https://t.me/Kris_yakovenko" target="_blank"
+                  ><img src="imgs/iconf1.svg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
