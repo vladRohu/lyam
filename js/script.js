@@ -17,23 +17,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const lang = this.getAttribute("data-lang");
       const currentPath = window.location.pathname;
-
       const pathSegments = currentPath
         .split("/")
         .filter((segment) => segment.length > 0);
-      let currentLang = pathSegments[0];
 
-      const newPath = currentLang.match(/en|ru|uk/)
-        ? currentPath.replace(`/${currentLang}`, `/${lang}`)
-        : `/${lang}${currentPath}`;
+      if (pathSegments[0] === "lyam") {
+        pathSegments[1] = lang;
+      } else {
+        pathSegments.splice(0, 1, "lyam", lang);
+      }
 
+      const newPath = "/" + pathSegments.join("/") + "/";
       updateActiveLink(lang);
 
-      window.location.href = newPath.replace("/index.html", "/");
+      window.location.href = newPath;
     });
   });
 
-  const currentLang = window.location.pathname.split("/")[1];
+  const currentLang = window.location.pathname.split("/")[2];
   updateActiveLink(currentLang);
 });
 
